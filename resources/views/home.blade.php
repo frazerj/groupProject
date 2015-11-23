@@ -10,7 +10,8 @@
 </head>
 <body>
 <div class="title">
-    CSCONNECT<hr>
+    CSCONNECT
+    <hr>
 </div>
 </body>
 </html>
