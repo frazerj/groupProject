@@ -13,11 +13,16 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
+            $table->integer('cwid')->unique();
+            $table->string('firstName');
+            $table->string('lastName');
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->rememberToken();
+            $table->enum('languages',['C++','Java','Python'])->nullable();
+            $table->enum('classes',['261','262','306','406'])->nullable();
+            $table->enum('teamStyle',['social','competitive','np'])->nullable();
+            $table->integer('teamID')->nullable();
+            $table->boolean('admin');
             $table->timestamps();
         });
     }

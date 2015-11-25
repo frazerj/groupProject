@@ -14,7 +14,7 @@
 						<select name="teamStyle" style="width: 185px;">
 						  <option value="social">Social</option>
 						  <option value="competitive">Competitive</option>
-						  <option value="neither">Don't Care</option>
+						  <option value="np">Don't Care</option>
 						</select><br>
 						Courses Taken: <input type="text" name="coursesTaken" style="width: 180px;"><br>
 						<p align="left"><button type="button" align="left">Edit Information</button></p>
