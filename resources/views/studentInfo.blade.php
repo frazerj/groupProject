@@ -18,15 +18,17 @@
 <h2> Student Info</h2>
 {!! Form::open() !!}
 
-{!! Form::label('Username:') !!} {!! Form::text('name') !!}
+{!! Form::label('Name:') !!} {!! Form::text('name') !!}
 <br>
-{!! Form::label('Password:') !!} {!! Form::password('password') !!}
+{!! Form::label('Preferred languages:') !!} {!! Form::text('prefLanguages') !!}
 <br>
-{!!  Form::submit('Log In!') !!}
-
+{!! Form::label('Team style:') !!} {!! Form::select('teamStyle', array('S' => 'Social', 'C' => 'Competitive', 'D' => 'Don\'t Care')) !!}
+<br>
+{!! Form::label('Courses Taken:') !!} {!! Form::textarea('prefLanguages') !!}
+<br>
+{!!  Form::submit('Create Account!') !!}
+<br>
 {!! Form::close() !!}
-
-<p style="font-size:11px" align="center">New user? Click <a href="studentInfo">here</a> to create an account!</p>
 
 </body>
 </html>
@@ -55,4 +57,4 @@
 		</div>
 	</div>
 </head>
-</html>*/-->
+</html>/-->
