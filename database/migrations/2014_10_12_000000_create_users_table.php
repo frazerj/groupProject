@@ -19,9 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('lastName')->nullable();
             $table->string('email')->unique();
             $table->string('password', 60);
-            $table->enum('languages',['C++','Java','Python'])->nullable();
-            $table->enum('classes',['261','262','306','406'])->nullable();
-            $table->enum('teamStyle',['social','competitive','np'])->nullable();
+            $table->string('languages')->nullable();
+            $table->boolean('c261')->nullable();
+            $table->boolean('c262')->nullable();
+            $table->boolean('c306')->nullable();
+            $table->boolean('c406')->nullable();
+            $table->string('teamStyle')->nullable();
             $table->integer('teamID')->nullable();
             $table->boolean('admin')->nullable();
             $table->rememberToken();

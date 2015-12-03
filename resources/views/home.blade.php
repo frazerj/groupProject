@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="home.blade.css">
 <head>
-	<title>Login Page</title>
+	<title>Home Page</title>
 	<style>
 		.header {
 			font-size: 300%;
@@ -15,17 +15,11 @@
 	<hr>
 </h1>
 
-{!! Form::open() !!}
-
-{!! Form::label('Username:') !!} {!! Form::text('name') !!}
+<button type="button" onclick="location.href='/studentInfo' ">Student Info</button>
 <br>
-{!! Form::label('Password:') !!} {!! Form::password('password') !!}
-<br>
-{!!  Form::submit('Log In!') !!}
+<button type="button" onclick="location.href='' ">Team Info</button>
 
-{!! Form::close() !!}
-
-<p style="font-size:11px" align="center">New user? Click <a href="studentInfo">here</a> to create an account!</p>
+<p style="font-size:11px" align="center">Click <a href="auth/logout">here</a> to logout</p>
 
 </body>
 </html>

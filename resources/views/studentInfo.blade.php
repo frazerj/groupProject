@@ -2,7 +2,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="home.blade.css">
 <head>
-	<title>Login Page</title>
+	<title>Student Info Page</title>
 	<style>
 		.header {
 			font-size: 300%;
@@ -15,18 +15,30 @@
 	<hr>
 </h1>
 
-<h2> Student Info</h2>
-{!! Form::open() !!}
 
-{!! Form::label('Name:') !!} {!! Form::text('name') !!}
+
+<h2> Student Info</h2>
+
+{!! Form::open(array('method'=>'PATCH', 'action' => 'HomeController@home')) !!}
+
+{!! Form::label('First Name:') !!} {!! Form::text('firstName', $user->firstName) !!}
 <br>
-{!! Form::label('Preferred languages:') !!} {!! Form::text('prefLanguages') !!}
+{!! Form::label('Last Name:') !!} {!! Form::text('lastName', $user->lastName) !!}
 <br>
-{!! Form::label('Team style:') !!} {!! Form::select('teamStyle', array('S' => 'Social', 'C' => 'Competitive', 'D' => 'Don\'t Care')) !!}
+{!! Form::label('Team Style:') !!} {!! Form::select('teamStyle', array('S' => 'Social', 'C' => 'Competitive', 'D' => 'Don\'t Care'),$user->teamStyle) !!}
 <br>
-{!! Form::label('Courses Taken:') !!} {!! Form::textarea('prefLanguages') !!}
+{!! Form::label('Preferred Language:') !!} {!! Form::select('languages', array('C' => 'C++', 'J' => 'Java', 'P' => 'Python'),$user->languages) !!}
 <br>
-{!!  Form::submit('Create Account!') !!}
+{!! Form::label('Courses Taken:') !!}
+<br>
+{!! Form::checkbox('261','261',$user->c261) !!} {!! Form::label('261 Programming Concepts') !!} <br>
+{!! Form::checkbox('262','262',$user->c262) !!} {!! Form::label('262 Data Structures') !!} <br>
+{!! Form::checkbox('306','306',$user->c306) !!} {!! Form::label('306 Software Engineering') !!} <br>
+{!! Form::checkbox('406','406',$user->c406) !!} {!! Form::label('406 Algorithms') !!} <br>
+
+
+<br>
+{!!  Form::submit('Save Info') !!}
 <br>
 {!! Form::close() !!}
 
