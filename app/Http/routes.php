@@ -11,7 +11,23 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@login');
+//Route::get('home', 'HomeController@index');
 Route::get('studentInfo', 'HomeController@studentInfo');
 
+Route::get('/login', 'HomeController@login');
+Route::get('/register', 'HomeController@register');
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+Route::controllers([
+    'password' => 'Auth\PasswordController',
+]);

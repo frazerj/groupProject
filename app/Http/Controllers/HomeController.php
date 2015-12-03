@@ -3,9 +3,14 @@
 class HomeController extends Controller {
 
 
-    public function index() {
+    public function login() {
         //
-        return view('home');
+        return view('auth/login');
+    }
+
+    public function register() {
+        //
+        return view('auth/register');
     }
 
     public function studentInfo() {
