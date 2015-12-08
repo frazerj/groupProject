@@ -42,16 +42,18 @@ class HomeController extends Controller {
         return view('studentInfo', compact('user'));
     }
 
-    public function update() {
-        //$id=Auth::User()->id;
-        //$id=1;
-
+    public function update()
+    {
         //$user = User::findOrFail($id);
 
-        //$input = Request::all();
+        //$book->update($request->all());
 
-        //$user->update($input);
+        $user = Auth::user();
 
-        return view('studentInfo');
+        $input = Request::all();
+
+        $user->update($input);
+
+        return redirect('home');
     }
 }

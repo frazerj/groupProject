@@ -18,8 +18,8 @@
 
 
 <h2> Student Info</h2>
-
-{!! Form::open(array('method'=>'PATCH', 'action' => 'HomeController@home')) !!}
+{!! Form::model($user, ['method'=>'PATCH', 'action'=> ['HomeController@update', $user->id]]) !!}
+<!--{!! Form::open(array('method'=>'PATCH', 'action' => 'HomeController@home')) !!}-->
 
 {!! Form::label('First Name:') !!} {!! Form::text('firstName', $user->firstName) !!}
 <br>
