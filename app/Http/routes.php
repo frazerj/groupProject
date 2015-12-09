@@ -34,6 +34,11 @@ Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 
+//admin Routes
+Route::get('showStudents', 'AdminController@showStudents');
+Route::get('showTeams', 'AdminController@createTeams');
+Route::post('showTeams', 'AdminController@createTeams');
+
 Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
