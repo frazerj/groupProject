@@ -41,8 +41,5 @@
     </div>
 
 {!! Form::close() !!}
-    <hr>
-    <h3>Current Teams</h3>
-
 </body>
 </html>
