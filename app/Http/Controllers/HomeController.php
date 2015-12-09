@@ -44,9 +44,6 @@ class HomeController extends Controller {
 
     public function update()
     {
-        //$user = User::findOrFail($id);
-
-        //$book->update($request->all());
 
         $user = Auth::user();
 
