@@ -62,9 +62,50 @@ class AdminController extends Controller {
 
     public function show($id)
     {
+        $user = Auth::user();
+
+        if($user['admin'] != 'true' ){
+            return redirect('home');
+        }
+
         $student = User::findOrFail($id);
 
         return view('showStudentInfo')->with('student', $student);
 
+    }
+
+    public function teams()
+    {
+        $user = Auth::user();
+
+        if($user['admin'] != 'true' ){
+            return redirect('home');
+        }
+
+        $students = User::where('admin', '!=', 'true')->get();
+
+        $student = User::where('admin', '!=', 'true')->orderby('teamID','desc')->first();
+
+        $numTeams = $student['teamID'];
+
+        return view('showTeams')->with('students', $students)
+            ->with('numTeams', $numTeams);
+    }
+
+    public function edit($id)
+    {
+        $user = Auth::user();
+
+        if($user['admin'] != 'true' ){
+            return redirect('home');
+        }
+
+        $student = User::findOrFail($id);
+
+        $input = Request::all();
+
+        $student->update($input);
+
+        return redirect('home');
     }
 }

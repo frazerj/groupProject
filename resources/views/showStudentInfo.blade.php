@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="home.blade.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <head>
     <title>Student Info Page</title>
     <style>
@@ -37,6 +37,15 @@
 <br>
 <br>
 <b>Current Team:</b> Team {{ $student->teamID }}
+
+{!! Form::model($student, ['method'=>'PATCH', 'action'=> ['AdminController@edit', $student->teamID]]) !!}
+        <!--{!! Form::open(array('method'=>'PATCH', 'action' => 'HomeController@home')) !!}-->
+
+{!! Form::label('Current Team:') !!} {!! Form::text('teamID', $student->teamID) !!}
+<br>
+{!!  Form::submit('Save Info') !!}
+<br>
+{!! Form::close() !!}
 
 
 <p style="font-size:11px" align="center">Click <a href="auth/logout">here</a> to logout</p>

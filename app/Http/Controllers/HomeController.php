@@ -60,13 +60,10 @@ class HomeController extends Controller {
 
         $teamid = $user['teamID'];
 
-        $test = 1;
+        $students = User::where('teamID', '=', $teamid )->get();
 
-        //$students = User::where('teamID', '==', $teamid )->get();
-
-        return $teamid;
-
-        //return view('teamInfo', compact('students'));
+        return view('teamInfo')->with('students', $students)
+                               ->with('teamid', $teamid);
     }
 
     public function update()

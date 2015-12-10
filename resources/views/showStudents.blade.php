@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="home.blade.css">
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 <head>
     <title>Home Page</title>
     <style>
@@ -16,6 +18,9 @@
 </h1>
 
 <button type="button" align="left" onclick="location.href='/home' ">Home</button>
+<br>
+<button type="button" align="left" onclick="location.href='/teams' ">Current Teams</button>
+
 
 <h2>Current Students</h2>
 <ul>

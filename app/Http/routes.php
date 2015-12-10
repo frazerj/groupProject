@@ -40,6 +40,10 @@ Route::get('showStudents', 'AdminController@showStudents');
 Route::get('showStudents/{id}', 'AdminController@show');
 Route::get('showTeams', 'AdminController@createTeams');
 Route::post('showTeams', 'AdminController@createTeams');
+Route::get('teams', 'AdminController@teams');
+
+
+Route::PATCH('showStudents/{id}','AdminController@edit');
 
 Route::controllers([
     'password' => 'Auth\PasswordController',
