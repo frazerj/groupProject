@@ -37,8 +37,7 @@ class AdminController extends Controller {
 
         //return $input['max'];
         return view('showTeams')->with('students', $students)
-                                ->with('numTeams', $numTeams)
-                                ->with('count', 1);
+                                ->with('numTeams', $numTeams);
 
 
     }

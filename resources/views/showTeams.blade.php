@@ -18,7 +18,7 @@
 <h2>Current Teams</h2>
 <ul>
 
-@for($i = 1; $i < $numTeams; $i++)
+@for($i = 1; $i <= $numTeams; $i++)
     <li>Team <?php echo $i?></li>
         <ul>
             @foreach($students as $student)
@@ -27,7 +27,6 @@
                 @endif
             @endforeach
         </ul>
-    <?php $count = $count + 1?>
 @endfor
 </ul>
 </body>
