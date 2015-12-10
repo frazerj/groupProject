@@ -56,9 +56,15 @@ class AdminController extends Controller {
 
         //return $input['max'];
         return view('showTeams')->with('students', $students)
-                                ->with('numTeams', $numTeams);
-
+            ->with('numTeams', $numTeams);
 
     }
 
+    public function show($id)
+    {
+        $student = User::findOrFail($id);
+
+        return view('showStudentInfo')->with('student', $student);
+
+    }
 }

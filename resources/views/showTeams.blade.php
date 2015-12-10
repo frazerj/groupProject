@@ -25,7 +25,7 @@
         <ul>
             @foreach($students as $student)
                 @if($student->teamID == $i)
-                    <li>{{ $student->firstName }} {{$student->lastName}}</li>
+                    <li><a href="/showStudents/{{ $student->id }}">{{ $student->firstName }} {{$student->lastName}}</a></li>
                 @endif
             @endforeach
         </ul>

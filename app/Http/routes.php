@@ -37,6 +37,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 //admin Routes
 Route::get('showStudents', 'AdminController@showStudents');
+Route::get('showStudents/{id}', 'AdminController@show');
 Route::get('showTeams', 'AdminController@createTeams');
 Route::post('showTeams', 'AdminController@createTeams');
 
