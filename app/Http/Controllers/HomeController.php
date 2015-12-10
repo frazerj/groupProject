@@ -20,11 +20,18 @@ class HomeController extends Controller {
         return view('auth/register');
     }
 
+
     public function home() {
 
         if(Auth::guest())
         {
             return redirect('/');
+        }
+
+        $user = Auth::user();
+
+        if($user['admin'] == 'true' ){
+            return redirect('showStudents');
         }
 
         return view('home');

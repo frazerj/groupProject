@@ -41,5 +41,8 @@
     </div>
 
 {!! Form::close() !!}
+
+<p style="font-size:11px" align="center">Click <a href="auth/logout">here</a> to logout</p>
+
 </body>
 </html>

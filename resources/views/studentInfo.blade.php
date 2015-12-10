@@ -31,16 +31,19 @@
 <br>
 {!! Form::label('Courses Taken:') !!}
 <br>
-{!! Form::checkbox('261','261',$user->c261) !!} {!! Form::label('261 Programming Concepts') !!} <br>
-{!! Form::checkbox('262','262',$user->c262) !!} {!! Form::label('262 Data Structures') !!} <br>
-{!! Form::checkbox('306','306',$user->c306) !!} {!! Form::label('306 Software Engineering') !!} <br>
-{!! Form::checkbox('406','406',$user->c406) !!} {!! Form::label('406 Algorithms') !!} <br>
+{!! Form::checkbox('c261','c261',$user->c261) !!} {!! Form::label('261 Programming Concepts') !!} <br>
+{!! Form::checkbox('c262','c262',$user->c262) !!} {!! Form::label('262 Data Structures') !!} <br>
+{!! Form::checkbox('c306','c306',$user->c306) !!} {!! Form::label('306 Software Engineering') !!} <br>
+{!! Form::checkbox('c406','c406',$user->c406) !!} {!! Form::label('406 Algorithms') !!} <br>
 
 
 <br>
 {!!  Form::submit('Save Info') !!}
 <br>
 {!! Form::close() !!}
+
+
+<p style="font-size:11px" align="center">Click <a href="auth/logout">here</a> to logout</p>
 
 </body>
 </html>

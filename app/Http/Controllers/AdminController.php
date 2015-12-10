@@ -10,6 +10,13 @@ use App\Http\Requests;
 class AdminController extends Controller {
 
     public function showStudents() {
+
+        $user = Auth::user();
+
+        if($user['admin'] == 'false' ){
+            return redirect('home');
+        }
+
         $students = User::all();
 
         return view('showStudents')->with('students', $students);
@@ -17,6 +24,13 @@ class AdminController extends Controller {
     }
 
     public function createTeams() {
+
+        $user = Auth::user();
+
+        if($user['admin'] == 'false' ){
+            return redirect('home');
+        }
+
         $students = User::all();
         $input = Request::all(); //inputs = min, max
 
