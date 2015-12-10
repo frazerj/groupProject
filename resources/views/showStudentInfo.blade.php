@@ -15,6 +15,8 @@
     <hr>
 </h1>
 
+<button type="button" align="left" onclick="location.href='/home' ">Home</button>
+
 <h2> Student Info</h2>
 <br>
 
@@ -35,6 +37,9 @@
 <br>
 <br>
 <b>Current Team:</b> Team {{ $student->teamID }}
+
+
+<p style="font-size:11px" align="center">Click <a href="auth/logout">here</a> to logout</p>
 
 </body>
 </html>
