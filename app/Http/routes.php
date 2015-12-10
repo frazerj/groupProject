@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@login');
 Route::get('home', 'HomeController@home');
 Route::get('studentInfo', 'HomeController@studentInfo');
+Route::get('teamInfo', 'HomeController@teamInfo');
 
 Route::PATCH('studentInfo','HomeController@update');
 

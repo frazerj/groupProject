@@ -44,7 +44,10 @@ class AdminController extends Controller {
         }
         $count = 1;
         foreach($students as $student) {
-            $student['teamID'] = $count;
+
+            $student->update(['teamID' => $count] );
+
+            //$student['teamID'] = $count;
             $count++;
             if ($count > $numTeams) {
                 $count = 1;

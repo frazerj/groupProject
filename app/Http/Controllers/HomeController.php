@@ -49,6 +49,26 @@ class HomeController extends Controller {
         return view('studentInfo', compact('user'));
     }
 
+    public function teamInfo() {
+
+        if(Auth::guest())
+        {
+            return redirect('/');
+        }
+
+        $user = Auth::user();
+
+        $teamid = $user['teamID'];
+
+        $test = 1;
+
+        //$students = User::where('teamID', '==', $teamid )->get();
+
+        return $teamid;
+
+        //return view('teamInfo', compact('students'));
+    }
+
     public function update()
     {
 
