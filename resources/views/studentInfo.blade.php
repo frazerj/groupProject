@@ -15,7 +15,7 @@
 	<hr>
 </h1>
 
-
+<button type="button" align="left" onclick="location.href='/home' ">Home</button>
 
 <h2> Student Info</h2>
 {!! Form::model($user, ['method'=>'PATCH', 'action'=> ['HomeController@update', $user->id]]) !!}

@@ -56,6 +56,8 @@ class HomeController extends Controller {
 
         $input = Request::all();
 
+        $input = array_add($input, 'admin', 'false');
+
         $user->update($input);
 
         return redirect('home');

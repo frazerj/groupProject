@@ -15,6 +15,8 @@
     <hr>
 </h1>
 
+<button type="button" align="left" onclick="location.href='/home' ">Home</button>
+
 <h2>Current Students</h2>
 <ul>
 @foreach($students as $someStudent)

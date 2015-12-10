@@ -15,6 +15,8 @@
     <hr>
 </h1>
 
+<button type="button" align="left" onclick="location.href='/home' ">Home</button>
+
 <h2>Current Teams</h2>
 <ul>
 

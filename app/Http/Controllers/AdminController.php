@@ -13,11 +13,11 @@ class AdminController extends Controller {
 
         $user = Auth::user();
 
-        if($user['admin'] == 'false' ){
+        if($user['admin'] != 'true' ){
             return redirect('home');
         }
 
-        $students = User::all();
+        $students = User::where('admin', '!=', 'true')->get();
 
         return view('showStudents')->with('students', $students);
 
@@ -27,11 +27,13 @@ class AdminController extends Controller {
 
         $user = Auth::user();
 
-        if($user['admin'] == 'false' ){
+        if($user['admin'] != 'true' ){
             return redirect('home');
         }
 
-        $students = User::all();
+        $students = User::where('admin', '!=', 'true')->get();
+
+        //$students = User::all();
         $input = Request::all(); //inputs = min, max
 
         $numStudents = count($students);
